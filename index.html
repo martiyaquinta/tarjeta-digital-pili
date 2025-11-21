@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIS XV ICHU</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="wp-block-uagb-container uagb-block-d321cf4e uagb-is-root-container alignfull">
+        <div class="hero-content">
+            <h1 class="hero-title">MIS XV ICHU</h1>
+            <p class="hero-message">QUIERO QUE SEAS PARTE DE ESTE MOMENTO TAN IMPORTANTE PARA MÍ</p>
+            <button class="hero-button" onclick="document.getElementById('countdown-section').scrollIntoView({behavior: 'smooth'})">INGRESAR</button>
+        </div>
+    </div>
+
+    <!-- Countdown Section -->
+    <section id="countdown-section" class="countdown-section">
+        <h2 class="section-title">MIS XV ICHU</h2>
+        <div class="countdown-container">
+            <div class="countdown-item">
+                <span class="countdown-number" id="days">288</span>
+                <span class="countdown-label">DÍAS</span>
+            </div>
+            <div class="countdown-separator">:</div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="hours">2</span>
+                <span class="countdown-label">HORAS</span>
+            </div>
+            <div class="countdown-separator">:</div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="minutes">27</span>
+                <span class="countdown-label">MINUTOS</span>
+            </div>
+            <div class="countdown-separator">:</div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="seconds">47</span>
+                <span class="countdown-label">SEGUNDOS</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="info-section">
+        <h3 class="info-subtitle">NO AYUNES, VENÍ Y DEVORÁ</h3>
+        
+        <div class="info-grid">
+            <div class="info-card">
+                <h4 class="info-card-title">¿CUÁNDO?</h4>
+                <div class="info-card-content">
+                    <p class="info-date">5 DE SEPTIEMBRE 2026</p>
+                    <p class="info-time">21:30 HS</p>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h4 class="info-card-title">¿DÓNDE?</h4>
+                <div class="info-card-content">
+                    <p class="info-place">VICENZZA EVENTOS</p>
+                    <a href="https://maps.google.com" target="_blank" class="info-link">COMO LLEGAR</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dress Code Section -->
+    <section class="dresscode-section">
+        <h3 class="section-subtitle">HAGAMOS QUE SEA UNA NOCHE ¡INOLVIDABLE!</h3>
+        <p class="dresscode-label">DRESS CODE</p>
+        <h4 class="dresscode-title">ELEGANTE</h4>
+    </section>
+
+    <!-- Gifts Section -->
+    <section class="gifts-section">
+        <h5 class="section-heading">REGALOS</h5>
+        <p class="gifts-text">NADA ES MÁS IMPORTANTE QUE TU PRESENCIA, PERO SI DESEAS HACERME UN PRESENTE<br>PUEDES DEPOSITARLO EN LA SIGUIENTE CUENTA</p>
+        <button class="gifts-button" onclick="showAccountInfo()">VER CUENTA</button>
+    </section>
+
+    <!-- Photos Section -->
+    <section class="photos-section">
+        <h5 class="section-heading">QUIERO VER TUS FOTOS</h5>
+        <p class="photos-text">PUEDEN USAR MI # EN TODAS SUS PUBLICACIONES DE INSTAGRAM</p>
+        <p class="photos-hashtag">#ELMEJORXV</p>
+    </section>
+
+    <!-- RSVP Section -->
+    <section class="rsvp-section">
+        <h5 class="section-heading">CONFIRMÁ TU ASISTENCIA</h5>
+        <p class="rsvp-deadline">ANTES DEL 5 DE AGOSTO 2026</p>
+        
+        <form class="rsvp-form" id="rsvpForm">
+            <div class="form-group">
+                <label for="guests">Número de personas a confirmar</label>
+                <select id="guests" name="guests" onchange="updateGuestFields()">
+                    <option value="1">1 persona</option>
+                    <option value="2">2 personas</option>
+                    <option value="3">3 personas</option>
+                    <option value="4">4 personas</option>
+                    <option value="5">5 personas</option>
+                </select>
+            </div>
+
+            <div id="guestFields">
+                <div class="guest-info">
+                    <p class="guest-label">Invitado 1</p>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name1">Nombre *</label>
+                            <input type="text" id="name1" name="name1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname1">Apellido *</label>
+                            <input type="text" id="lastname1" name="lastname1" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="attendance">¿Confirmas tu asistencia? *</label>
+                <select id="attendance" name="attendance" required>
+                    <option value="">Seleccionar...</option>
+                    <option value="yes">¡Confirmo!</option>
+                    <option value="no">No podré asistir</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="dietary">¿Algún requerimiento en la alimentación?</label>
+                <input type="text" id="dietary" name="dietary" placeholder="Ninguno">
+            </div>
+
+            <div class="form-group">
+                <label for="song">¿Qué canción no puede faltar?</label>
+                <input type="text" id="song" name="song">
+            </div>
+
+            <button type="submit" class="submit-button">Confirmar</button>
+        </form>
+
+        <div class="rsvp-image">
+            <img src="https://latarjetadigital.com.ar/wp-content/uploads/2025/01/ichu-9-1024x682.jpg" alt="ichu 9">
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <h5 class="section-heading">TE ESPERO</h5>
+        <div class="social-links">
+            <a href="https://latarjetadigital.com.ar/" target="_blank" class="social-link">
+                <i class="fas fa-home"></i>
+            </a>
+            <a href="https://www.instagram.com/latarjetadigital_" target="_blank" class="social-link">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/message/3JPD7Z523T4VF1" target="_blank" class="social-link">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!-- Account Info Modal -->
+    <div id="accountModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAccountInfo()">&times;</span>
+            <h3>Información de cuenta</h3>
+            <p>Aquí puedes agregar los datos de la cuenta bancaria</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
