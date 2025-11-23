@@ -62,7 +62,7 @@ body, html {
     background-position: 54% 12%;
     background-size: cover;
     background-attachment: scroll;
-    background-image: url(./images/foto3.jpeg?v=2);
+    background-image: url(./images/foto3.jpeg?v=3);
     background-clip: padding-box;
     display: flex;
     flex-direction: column;
