@@ -423,6 +423,17 @@ body, html {
     font-weight: 500;
 }
 
+.rsvp-info {
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.rsvp-text {
+    font-size: 1.1rem;
+    color: var(--wp--preset--color--contrast);
+    margin-bottom: 30px;
+}
+
 .rsvp-form {
     max-width: 600px;
     margin: 0 auto 40px;

@@ -27,53 +27,6 @@ updateCountdown();
 // Auto-scrolling carousel - No manual controls needed
 // The carousel now runs automatically via CSS animation
 
-// Update guest fields based on number of guests
-function updateGuestFields() {
-    const guestCount = parseInt(document.getElementById('guests').value);
-    const guestFieldsContainer = document.getElementById('guestFields');
-    
-    guestFieldsContainer.innerHTML = '';
-    
-    for (let i = 1; i <= guestCount; i++) {
-        const guestDiv = document.createElement('div');
-        guestDiv.className = 'guest-info';
-        guestDiv.innerHTML = `
-            <p class="guest-label">Invitado ${i}</p>
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="name${i}">Nombre *</label>
-                    <input type="text" id="name${i}" name="name${i}" required>
-                </div>
-                <div class="form-group">
-                    <label for="lastname${i}">Apellido *</label>
-                    <input type="text" id="lastname${i}" name="lastname${i}" required>
-                </div>
-            </div>
-        `;
-        guestFieldsContainer.appendChild(guestDiv);
-    }
-}
-
-// Initialize guest fields
-updateGuestFields();
-
-// Handle form submission
-document.getElementById('rsvpForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const formData = new FormData(this);
-    const data = Object.fromEntries(formData);
-    
-    console.log('Form submitted:', data);
-    
-    // Show success message
-    alert('¡Gracias por confirmar tu asistencia! Te esperamos en la fiesta.');
-    
-    // Reset form
-    this.reset();
-    updateGuestFields();
-});
-
 // Modal functions
 function showAccountInfo() {
     document.getElementById('accountModal').style.display = 'block';

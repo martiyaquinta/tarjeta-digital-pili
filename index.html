@@ -126,55 +126,10 @@
         <h5 class="section-heading">CONFIRMÁ TU ASISTENCIA</h5>
         <p class="rsvp-deadline">ANTES DEL 5 DE JUNIO 2026</p>
         
-        <form class="rsvp-form" id="rsvpForm">
-            <div class="form-group">
-                <label for="guests">Número de personas a confirmar</label>
-                <select id="guests" name="guests" onchange="updateGuestFields()">
-                    <option value="1">1 persona</option>
-                    <option value="2">2 personas</option>
-                    <option value="3">3 personas</option>
-                    <option value="4">4 personas</option>
-                    <option value="5">5 personas</option>
-                </select>
-            </div>
-
-            <div id="guestFields">
-                <div class="guest-info">
-                    <p class="guest-label">Invitado 1</p>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name1">Nombre *</label>
-                            <input type="text" id="name1" name="name1" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="lastname1">Apellido *</label>
-                            <input type="text" id="lastname1" name="lastname1" required>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="attendance">¿Confirmas tu asistencia? *</label>
-                <select id="attendance" name="attendance" required>
-                    <option value="">Seleccionar...</option>
-                    <option value="yes">¡Confirmo!</option>
-                    <option value="no">No podré asistir</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="dietary">¿Algún requerimiento en la alimentación?</label>
-                <input type="text" id="dietary" name="dietary" placeholder="Ninguno">
-            </div>
-
-            <div class="form-group">
-                <label for="song">¿Qué canción no puede faltar?</label>
-                <input type="text" id="song" name="song">
-            </div>
-
-            <button type="submit" class="submit-button">Confirmar</button>
-        </form>
+        <div class="rsvp-info">
+            <p class="rsvp-text">Haz clic en el botón para confirmar tu asistencia</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfa19WW0bnHFA81c7I3TnduG3lS14jDrGfPQA6jUIcb8cgGcg/viewform" target="_blank" class="submit-button">Confirmar Asistencia</a>
+        </div>
 
         <div class="rsvp-image">
             <img src="./images/foto4.jpeg" alt="ichu 9">
