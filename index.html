@@ -53,7 +53,7 @@
         <!-- Photo Carousel -->
         <div class="carousel-container">
             <div class="carousel">
-                <div class="carousel-slide active">
+                <div class="carousel-slide">
                     <img src="./images/foto1.jpeg" alt="Foto 1">
                 </div>
                 <div class="carousel-slide">
@@ -65,18 +65,19 @@
                 <div class="carousel-slide">
                     <img src="./images/foto4.jpeg" alt="Foto 4">
                 </div>
-            </div>
-            <button class="carousel-btn prev" onclick="changeSlide(-1)">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-            <button class="carousel-btn next" onclick="changeSlide(1)">
-                <i class="fas fa-chevron-right"></i>
-            </button>
-            <div class="carousel-dots">
-                <span class="dot active" onclick="currentSlide(0)"></span>
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
+                <!-- Duplicar imágenes para efecto continuo -->
+                <div class="carousel-slide">
+                    <img src="./images/foto1.jpeg" alt="Foto 1">
+                </div>
+                <div class="carousel-slide">
+                    <img src="./images/foto2.jpeg" alt="Foto 2">
+                </div>
+                <div class="carousel-slide">
+                    <img src="./images/foto5.jpeg" alt="Foto 3">
+                </div>
+                <div class="carousel-slide">
+                    <img src="./images/foto4.jpeg" alt="Foto 4">
+                </div>
             </div>
         </div>
         
@@ -176,7 +177,7 @@
         </form>
 
         <div class="rsvp-image">
-            <img src="https://latarjetadigital.com.ar/wp-content/uploads/2025/01/ichu-9-1024x682.jpg" alt="ichu 9">
+            <img src="./images/foto4.jpeg" alt="ichu 9">
         </div>
     </section>
 
@@ -184,7 +185,7 @@
     <footer class="footer-section">
         <h5 class="section-heading">TE ESPERO</h5>
         <div class="social-links">
-            <a href="https://latarjetadigital.com.ar/" target="_blank" class="social-link">
+            <a href="./images/foto4.jpeg" target="_blank" class="social-link">
                 <i class="fas fa-home"></i>
             </a>
             <a href="https://www.instagram.com/latarjetadigital_" target="_blank" class="social-link">
@@ -200,8 +201,17 @@
     <div id="accountModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeAccountInfo()">&times;</span>
-            <h3>Información de cuenta</h3>
-            <p>Aquí puedes agregar los datos de la cuenta bancaria</p>
+            <h3>Datos de Cuenta</h3>
+            <div class="account-details">
+                <div class="account-item">
+                    <p class="account-label">Alias:</p>
+                    <p class="account-value">Pilivallejoo</p>
+                </div>
+                <div class="account-item">
+                    <p class="account-label">CVU:</p>
+                    <p class="account-value">0000003100010550533204</p>
+                </div>
+            </div>
         </div>
     </div>
 
