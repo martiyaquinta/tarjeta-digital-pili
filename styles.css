@@ -208,7 +208,7 @@ body, html {
     display: flex;
     gap: 15px;
     height: 400px;
-    animation: scroll-carousel 30s linear infinite;
+    animation: scroll-carousel 10s linear infinite;
     padding: 0 15px;
 }
 
