@@ -24,6 +24,36 @@ function updateCountdown() {
 const countdownInterval = setInterval(updateCountdown, 1000);
 updateCountdown();
 
+// Background Music Control
+const music = document.getElementById('backgroundMusic');
+const musicToggle = document.getElementById('musicToggle');
+let isPlaying = false;
+
+// Try to autoplay when page loads
+window.addEventListener('load', () => {
+    music.play().then(() => {
+        isPlaying = true;
+        musicToggle.innerHTML = '<i class="fas fa-pause"></i>';
+    }).catch(() => {
+        // Autoplay blocked, wait for user interaction
+        isPlaying = false;
+        musicToggle.innerHTML = '<i class="fas fa-play"></i>';
+    });
+});
+
+// Toggle play/pause
+musicToggle.addEventListener('click', () => {
+    if (isPlaying) {
+        music.pause();
+        musicToggle.innerHTML = '<i class="fas fa-play"></i>';
+        isPlaying = false;
+    } else {
+        music.play();
+        musicToggle.innerHTML = '<i class="fas fa-pause"></i>';
+        isPlaying = true;
+    }
+});
+
 // Auto-scrolling carousel - No manual controls needed
 // The carousel now runs automatically via CSS animation
 
